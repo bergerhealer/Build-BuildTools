@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bergerkiller</groupId>
-    <artifactId>spigot.build.server</artifactId>
+    <artifactId>build.buildtools</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Spigot-Build-Server</name>
+    <name>Build-BuildTools</name>
     <url>https://github.com/bergerhealer/spigot-build-server/</url>
 
     <properties>
