@@ -1,0 +1,86 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bergerkiller</groupId>
+    <artifactId>spigot.build.server</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>Spigot-Build-Server</name>
+    <url>https://github.com/bergerhealer/spigot-build-server/</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.serverversion>1.12-R0.1</project.serverversion>
+        <project.bkcversion>1.12.2-v3-SNAPSHOT</project.bkcversion>
+        <project.slversion>1.11.2-v2-SNAPSHOT</project.slversion>
+        <project.mwversion>1.11.2-v2-SNAPSHOT</project.mwversion>
+        <project.cibuild/>
+        <junit.version>4.11</junit.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>Central maven repository</id>
+            <url>http://central.maven.org/maven2/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>builder</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/build/BuildTools.jar</systemPath>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
+            <type>maven-plugin</type>
+        </dependency>
+    </dependencies>
+
+    <!-- Build -->
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+
+        <!-- Plugins -->
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+
+                <executions>
+                    <execution>
+                        <id>Execute-Build-Tools</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>install</phase>
+                        <configuration>
+                            <executable>java</executable>
+                            <workingDirectory>build</workingDirectory>
+                            <arguments>
+                                <argument>-jar</argument>
+                                <argument>BuildTools.jar</argument>
+                                <argument>-rev 1.12.2</argument>
+                                <argument>-dev</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <environmentVariables>
+                        <!-- Specify where git is found, otherwise build tools wont work -->
+                        <PATH>/usr/bin;C:\Program Files (x86)\Git\bin</PATH>
+                    </environmentVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

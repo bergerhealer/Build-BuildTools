@@ -1,0 +1,50 @@
+# Eclipse stuff
+.classpath
+.project
+.settings/
+
+# Build folder: only show BuildTools.jar
+build/*
+!build/BuildTools.jar
+
+# Minecraft client cache folder
+/minecraft/
+
+# netbeans
+nbproject/
+nbactions.xml
+nb-configuration.xml
+
+# we use maven!
+build.xml
+
+# maven
+target/
+dependency-reduced-pom.xml
+
+# vim
+.*.sw[a-p]
+
+# various other potential build files
+bin/
+dist/
+out/
+manifest.mf
+
+# Mac filesystem dust
+.DS_Store/
+
+# intellij
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# other files
+*.log*
+.git/
+
+# delombok
+*/src/main/lombok
+/target/
+/bin/
