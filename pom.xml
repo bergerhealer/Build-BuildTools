@@ -77,7 +77,7 @@
                 <configuration>
                     <environmentVariables>
                         <!-- Specify where git is found, otherwise build tools wont work -->
-                        <PATH>/usr/bin;C:\Program Files (x86)\Git\bin</PATH>
+                        <PATH>/usr/bin;C:\Program Files (x86)\Git\bin;${env.PATH};${env.path}</PATH>
                     </environmentVariables>
                 </configuration>
             </plugin>
