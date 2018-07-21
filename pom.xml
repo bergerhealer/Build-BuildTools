@@ -12,10 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.serverversion>1.12-R0.1</project.serverversion>
-        <project.bkcversion>1.12.2-v3-SNAPSHOT</project.bkcversion>
-        <project.slversion>1.11.2-v2-SNAPSHOT</project.slversion>
-        <project.mwversion>1.11.2-v2-SNAPSHOT</project.mwversion>
+        <project.serverversion>1.13</project.serverversion>
         <project.cibuild/>
         <junit.version>4.11</junit.version>
     </properties>
@@ -68,7 +65,7 @@
                             <arguments>
                                 <argument>-jar</argument>
                                 <argument>BuildTools.jar</argument>
-                                <argument>-rev 1.12.2</argument>
+                                <argument>-rev ${project.serverversion}</argument>
                                 <argument>-dev</argument>
                             </arguments>
                         </configuration>
