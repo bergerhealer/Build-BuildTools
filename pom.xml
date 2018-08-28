@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.serverversion>1.13</project.serverversion>
+        <project.serverversion>1.13.1</project.serverversion>
         <project.cibuild/>
         <junit.version>4.11</junit.version>
     </properties>
