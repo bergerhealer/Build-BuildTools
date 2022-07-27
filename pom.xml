@@ -65,8 +65,9 @@
                             <arguments>
                                 <argument>-jar</argument>
                                 <argument>BuildTools.jar</argument>
-                                <argument>-rev</argument>
-                                <argument>${project.serverversion}</argument>
+                                <argument>-dev</argument>
+                                <!--<argument>-rev</argument>-->
+                                <!--<argument>${project.serverversion}</argument>-->
                             </arguments>
                         </configuration>
                     </execution>
